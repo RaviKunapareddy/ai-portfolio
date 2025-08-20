@@ -1,0 +1,16 @@
+{
+  "name": "Ravi Kunapareddy Portfolio",
+  "short_name": "RK Portfolio", 
+  "description": "GenAI Engineer Portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#475569",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+} 

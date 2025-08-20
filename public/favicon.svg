@@ -1,0 +1,14 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#475569"/>
+  
+  <!-- Minimal Pro R - scaled for favicon -->
+  <path 
+    d="M9 7L9 25M9 7L17.5 7C20.5 7 22.5 9 22.5 11.5C22.5 14 20.5 16 17.5 16L9 16M16 16L22.5 25" 
+    stroke="#e2e8f0" 
+    strokeWidth="2.2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+    fill="none"
+  />
+</svg>
