@@ -35,7 +35,8 @@ export default function ChatbotDemo({ apiEndpoint }: ChatbotDemoProps) {
   const [showCart, setShowCart] = useState(false);
   const messagesContainerRef = useRef<HTMLDivElement>(null);
 
-  const client = useMemo(() => new ChatbotClient(), []);
+  // Initialize client with the provided API endpoint
+  const client = useMemo(() => new ChatbotClient(apiEndpoint), [apiEndpoint]);
 
   // Check backend health on mount
   useEffect(() => {
@@ -413,7 +414,7 @@ export default function ChatbotDemo({ apiEndpoint }: ChatbotDemoProps) {
                           <button
                             key={index}
                             onClick={() => handleQuickReply(suggestion)}
-                            className="bg-white border border-slate-200 px-2 py-1 rounded text-xs text-slate-700 hover:bg-slate-50"
+                            className="bg-white border border-slate-200 px-3 py-1.5 rounded text-sm text-slate-700 hover:bg-slate-100 transition-colors"
                           >
                             {suggestion}
                           </button>
@@ -429,20 +430,7 @@ export default function ChatbotDemo({ apiEndpoint }: ChatbotDemoProps) {
               </div>
             ))}
             
-            {/* Dynamic suggestions from API */}
-            {messages.length > 0 && messages[messages.length - 1].suggestions && messages[messages.length - 1].suggestions!.length > 0 && (
-              <div className="flex gap-2 mt-3 flex-wrap">
-                {messages[messages.length - 1].suggestions!.map((suggestion, index) => (
-                  <button 
-                    key={index}
-                    onClick={() => handleQuickReply(suggestion)}
-                    className="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1 rounded text-sm"
-                  >
-                    {suggestion}
-                  </button>
-                ))}
-              </div>
-            )}
+            {/* Removed duplicate suggestions */}
             
             {/* Typing Indicator */}
             {(isLoading || isTyping) && (
@@ -486,20 +474,7 @@ export default function ChatbotDemo({ apiEndpoint }: ChatbotDemoProps) {
               </button>
             </div>
             
-            {/* Dynamic suggestions from API */}
-            {messages.length > 0 && messages[messages.length - 1].suggestions && messages[messages.length - 1].suggestions!.length > 0 && (
-              <div className="flex gap-2 mt-3 flex-wrap">
-                {messages[messages.length - 1].suggestions!.map((suggestion, index) => (
-                  <button 
-                    key={index}
-                    onClick={() => handleQuickReply(suggestion)}
-                    className="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1 rounded text-sm"
-                  >
-                    {suggestion}
-                  </button>
-                ))}
-              </div>
-            )}
+            {/* Removed duplicate suggestions */}
           </div>
         </div>
       </div>
