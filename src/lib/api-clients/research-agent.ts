@@ -1,7 +1,7 @@
 // Research Agent API client
 // Mirrors the BaseAPIClient pattern used in chatbot.ts
 
-export const DEFAULT_BASE_URL = 'https://subjective-martha-researchagent-ebdaf861.koyeb.app/api';
+export const DEFAULT_BASE_URL = 'https://researchagent-api.ravii.app/api';
 
 export interface APIResponse<T> {
   data: T;

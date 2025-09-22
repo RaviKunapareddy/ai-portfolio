@@ -114,8 +114,8 @@ NEXT_PUBLIC_SITE_URL=https://your-site-url.com
 NEXT_PUBLIC_PLAUSIBLE_DOMAIN=your-domain.com
 
 # Live API Endpoints
-NEXT_PUBLIC_RESEARCH_AGENT_API=https://subjective-martha-researchagent-ebdaf861.koyeb.app/api
-NEXT_PUBLIC_CHATBOT_API=http://52.91.104.111
+NEXT_PUBLIC_RESEARCH_AGENT_API=https://researchagent-api.ravii.app/api
+NEXT_PUBLIC_CHATBOT_API=https://chatbot-api.ravii.app
 ```
 
 ## 🤝 Contributing
